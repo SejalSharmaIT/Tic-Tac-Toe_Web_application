@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a18cd1); /* Soft pink-purple background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    color: #6d1d59;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #00000050;
+  }
+  
+  #game {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .cell {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid #ffffffaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #f369da;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .cell:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.07);
+  }
+  
+  #status {
+    color: #61135d;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #00000050;
+  }
+  
+  #restartBtn {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #8e2de2, #c471ed); /* Dark Purple to Deep Pink */
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(142, 45, 226, 0.5);
+}
+
+#restartBtn:hover {
+    background: linear-gradient(to right, #6a11cb, #b721ff); /* Darker shades on hover */
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+}
+
+  /* Winning Animation */
+  .cell.winning {
+    background: #ff9a9e !important; /* Soft peach winning color */
+    animation: glow 1s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px #ff9a9e, 0 0 20px #ff9a9e;
+    }
+    to {
+      box-shadow: 0 0 20px #ff9a9e, 0 0 30px #ff9a9e;
+    }
+  }
+  
